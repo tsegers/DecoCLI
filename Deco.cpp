@@ -233,7 +233,7 @@ double Deco::GetGFPoint(double depth) const {
     double LowDepth = this->FirstStopDepth;
 
     if (FirstStopDepth == -1) {
-        return gfLow;
+        return gfHigh;
     } else {
         if (depth < LowDepth) {
             double GF = gfHigh + ((gfHigh - gfLow) / (0.0 - BarToMeter(LowDepth))) * (BarToMeter(depth));
